@@ -1,0 +1,74 @@
+/*! debug.css | MIT License | https://gist.github.com/zaydek/6b2e55258734deabbd2b4a284321d6f6 */
+
+
+:root {
+	
+	--white      : #ffffff;
+	--orange     : #ff691f;
+	--yellow     : #fab81e;
+	--lightgreen : #7fdbb6;
+	--green      : #19cf86;
+	--lightblue  : #91d2fa;
+	--blue       : #1b95e0;
+	--grey       : #abb8c2;
+	--red        : #e81c4f;
+	--pink       : #f58ea8;
+	--purple     : #981ceb;
+	--black      : #000000;
+
+	font: 1rem/1.175 "BlinkMacSystemFont", -apple-system, "Roboto", sans-serif;
+}
+
+#app {
+	display: grid;
+	grid-template-areas:
+		". . . . "
+		". . . . "
+		". . . . ";
+	padding: 170px 250px; grid-gap: 60px;
+	width: 100vw; height: 100vh;
+}
+
+
+.grid-item {
+	display: grid;
+	grid-template-rows: 65% 35%;
+	background: whitesmoke;
+	border-radius: 4px; box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 60px;
+	transition: transform 500ms;
+}
+
+.grid-item:hover {
+	transition: transform 500ms;
+	transform: scale(1.1);
+}
+
+.grid-cell--top, .grid-cell--bottom {
+	display: flex;
+	justify-content: center; align-items: center;
+}
+
+.grid-cell--top    { border-radius: 4px 4px 0 0; }
+.grid-cell--bottom { font-weight: 900; font-size: 1.75rem; }
+
+.bounce { animation: bounce 1s; }
+
+@keyframes bounce {
+	  0% { transform: rotate(  0deg) scale(1.0); }
+	 33% { transform: rotate( 12deg) scale(1.2); }
+	 67% { transform: rotate(-12deg) scale(0.8); }
+	100% { transform: rotate(  0deg) scale(1.0); }
+}
+
+
+
+
+
+[debug], [debug] *:not(g):not(path) {
+	color:                 hsla(210, 100%, 100%, 0.9) !important;
+	background:            hsla(210, 100%,  50%, 0.5) !important;
+	outline: solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+
+	box-shadow: none !important;
+	filter:     none !important;
+}
